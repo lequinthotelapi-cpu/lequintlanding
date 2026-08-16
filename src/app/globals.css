@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
+/*
+  Le Quint Hotel — design tokens.
+  Base calida (marfil / casi-negro tostado) con un tercer tono de
+  acento (bronce) para dar contraste y calidez sin caer en gradientes
+  ni colores saturados. WhatsApp conserva su verde de marca solo en
+  el boton flotante (icono), no en los CTAs principales, para que la
+  paleta se lea coherente. Pagina en modo claro; el cierre
+  (Ubicacion/Contacto/Footer) es la franja oscura de la landing.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #1a1613;
+  --ink-soft: #423a30;
+  --muted: #756a5a;
+  --paper: #f7f2e9;
+  --surface: #ffffff;
+  --line: #e6dcc8;
+  --line-strong: #d1c2a3;
+  --stone: #efe6d3;
+  --accent: #a8703d;
+  --accent-soft: #c68f56;
+  --accent-ink: #6f4823;
+  --whatsapp: #25d366;
+  --whatsapp-ink: #128c7e;
+  --footer-bg: #171310;
+  --footer-fg: #f4efe4;
+  --footer-muted: #a89d8b;
+
+  --radius-base: 2px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 500ms;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-stone: var(--stone);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-ink: var(--whatsapp-ink);
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-fg: var(--footer-fg);
+  --color-footer-muted: var(--footer-muted);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --radius-DEFAULT: var(--radius-base);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+  Fundido + desplazamiento de entrada al hacer scroll. La clase
+  .reveal-init la aplica ParallaxImage/Reveal por JS antes de
+  observar el elemento; sin JS, el contenido nunca queda oculto
+  (ver componentes ui/Reveal.tsx y ui/Parallax.tsx).
+*/
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-init {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+  }
+  .reveal-init.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
