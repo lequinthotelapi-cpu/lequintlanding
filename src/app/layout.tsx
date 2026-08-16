@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     default: "Le Quint Hotel · Cúcuta",
     template: "%s · Le Quint Hotel",
   },
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+  },
   // PENDIENTE: descripcion oficial del hotel, a confirmar con el cliente.
   description:
     "Le Quint Hotel, en el centro de Cúcuta. Habitaciones Sencilla, Doble y Familiar, wifi gratis y atención directa por WhatsApp.",
