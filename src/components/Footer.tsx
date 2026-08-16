@@ -128,7 +128,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 border-t border-white/10 pt-6 text-xs text-footer-muted">
-          © {new Date().getFullYear()} {hotel.nombre}. Todos los derechos reservados.
+          © 2026 Le Quint Hotel - USRV. Todos los derechos reservados.
         </div>
       </div>
     </footer>
