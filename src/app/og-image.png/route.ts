@@ -1,0 +1,15 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+
+export async function GET() {
+  const imgPath = path.join(process.cwd(), "assets/imgs/fachada.jpg");
+  const buffer = await readFile(imgPath);
+
+  return new Response(buffer, {
+    status: 200,
+    headers: {
+      "Content-Type": "image/jpeg",
+      "Cache-Control": "public, max-age=86400",
+    },
+  });
+}

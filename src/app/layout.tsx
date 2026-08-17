@@ -45,7 +45,8 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteUrl.replace(/\/$/, "")}/opengraph-image`,
+        // Static, deterministic image URL — more reliable for social caches
+        url: `${siteUrl.replace(/\/$/, "")}/og-image.png`,
         width: 1200,
         height: 630,
       },
