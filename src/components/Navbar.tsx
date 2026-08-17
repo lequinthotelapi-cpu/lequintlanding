@@ -87,9 +87,12 @@ export function Navbar() {
     return () => window.removeEventListener("resize", updateIndicator);
   }, [activeHref]);
 
-  const whatsappHref = hotel.whatsapp
-    ? `https://wa.me/${hotel.whatsapp}`
-    : "#contacto";
+  const whatsappHref = (() => {
+    if (!hotel.whatsapp) return "#contacto";
+    const base = `https://wa.me/${hotel.whatsapp}`;
+    const text = hotel.defaultMessage ? `?text=${encodeURIComponent(hotel.defaultMessage)}` : "";
+    return `${base}${text}`;
+  })();
 
   return (
     <header className="sticky top-0 z-50">
@@ -199,8 +202,8 @@ export function Navbar() {
             rel={hotel.whatsapp ? "noopener noreferrer" : undefined}
             className="mt-8 inline-flex items-center justify-center gap-2 rounded-[2px] bg-accent-ink px-6 py-4 text-base font-semibold text-white active:translate-y-px"
           >
-            <WhatsappLogo size={20} weight="fill" />
-            Escribir por WhatsApp
+            <CalendarCheck size={20} weight="fill" />
+            Reservas
           </a>
         </nav>
       ) : null}

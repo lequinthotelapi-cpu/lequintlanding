@@ -96,7 +96,7 @@ export function ReviewsCarrusel() {
               </p>
             </div>
             <Button
-              href={hotel.whatsapp ? `https://wa.me/${hotel.whatsapp}` : "#contacto"}
+              href={hotel.whatsapp ? `https://wa.me/${hotel.whatsapp}${hotel.defaultMessage ? `?text=${encodeURIComponent(hotel.defaultMessage)}` : ""}` : "#contacto"}
               variant="primary"
               icon={WhatsappLogo}
               external={Boolean(hotel.whatsapp)}

@@ -7,7 +7,9 @@ import { hotel } from "@/data/hotel";
  * Client Component aqui.
  */
 export function WhatsAppFloat() {
-  const whatsappHref = hotel.whatsapp ? `https://wa.me/${hotel.whatsapp}` : "#contacto";
+  const whatsappHref = hotel.whatsapp
+    ? `https://wa.me/${hotel.whatsapp}${hotel.defaultMessage ? `?text=${encodeURIComponent(hotel.defaultMessage)}` : ""}`
+    : "#contacto";
 
   return (
     <a

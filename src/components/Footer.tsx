@@ -13,7 +13,9 @@ const links = [
 ];
 
 export function Footer() {
-  const whatsappHref = hotel.whatsapp ? `https://wa.me/${hotel.whatsapp}` : null;
+  const whatsappHref = hotel.whatsapp
+    ? `https://wa.me/${hotel.whatsapp}${hotel.defaultMessage ? `?text=${encodeURIComponent(hotel.defaultMessage)}` : ""}`
+    : null;
   const telefonoHref = hotel.telefono ? `tel:${hotel.telefono.replace(/\s+/g, "")}` : null;
   const redes = [
     { href: hotel.redes.instagram, label: "Instagram", Icon: InstagramLogo },

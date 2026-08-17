@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
+import { WhatsappLogo, CalendarCheck } from "@phosphor-icons/react/dist/ssr";
 import fachada from "@assets/imgs/fachada.jpg";
 import recepcion2 from "@assets/imgs/recepcion2.jpg";
 import individual2 from "@assets/imgs/individual2.jpg";
@@ -9,9 +9,12 @@ import { Button } from "@/components/ui/Button";
 import { Parallax } from "@/components/ui/Parallax";
 
 export function Hero() {
-  const whatsappHref = hotel.whatsapp
-    ? `https://wa.me/${hotel.whatsapp}`
-    : "#contacto";
+  const whatsappHref = (() => {
+    if (!hotel.whatsapp) return "#contacto";
+    const base = `https://wa.me/${hotel.whatsapp}`;
+    const text = hotel.defaultMessage ? `?text=${encodeURIComponent(hotel.defaultMessage)}` : "";
+    return `${base}${text}`;
+  })();
 
   return (
     <section id="top" className="relative overflow-hidden bg-ink">
@@ -49,10 +52,10 @@ export function Hero() {
               <Button
                 href={whatsappHref}
                 variant="primary"
-                icon={WhatsappLogo}
+                icon={CalendarCheck}
                 external={Boolean(hotel.whatsapp)}
               >
-                Escribir por WhatsApp
+                Reservas
               </Button>
               <Button href="#habitaciones" variant="outline-invert">
                 Ver habitaciones

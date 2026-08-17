@@ -12,6 +12,7 @@ type HotelInfo = {
   telefono: string;
   whatsapp: string;
   email: string;
+  defaultMessage?: string;
   coordenadas: { lat: number; lng: number } | null;
   checkIn: string;
   checkOut: string;
@@ -33,6 +34,8 @@ export const hotel: HotelInfo = {
   whatsapp: "573116506060",
   // Correo oficial del hotel
   email: "lequinthotel@gmail.com",
+  // Mensaje por defecto para contactos vía WhatsApp (opcional)
+  defaultMessage: "Hola, les escribo desde la página web de Le Quint Hotel para solicitar información sobre disponibilidad y tarifas. Muchas gracias.",
   // PENDIENTE: coordenadas GPS exactas
   coordenadas: null,
   checkIn: "2:00 p.m.",

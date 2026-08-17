@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function Contacto() {
-  const whatsappHref = hotel.whatsapp ? `https://wa.me/${hotel.whatsapp}` : "#contacto";
+  const whatsappHref = hotel.whatsapp
+    ? `https://wa.me/${hotel.whatsapp}${hotel.defaultMessage ? `?text=${encodeURIComponent(hotel.defaultMessage)}` : ""}`
+    : "#contacto";
   const telefonoHref = hotel.telefono ? `tel:${hotel.telefono.replace(/\s+/g, "")}` : null;
   const emailHref = hotel.email ? `mailto:${hotel.email}` : null;
 
