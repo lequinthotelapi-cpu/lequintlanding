@@ -41,7 +41,11 @@ export function HabitacionBloque({ habitacion, reverse = false, index }: Habitac
         {secundarias.map((foto) => (
           <div
             key={foto.alt}
-            className="relative col-span-1 row-span-1 overflow-hidden bg-stone"
+            className={`relative col-span-1 overflow-hidden bg-stone ${
+              // Con una sola foto secundaria, ocupa las 2 celdas de su
+              // columna (si no, queda una celda vacia sin nada al lado).
+              secundarias.length === 1 ? "row-span-2" : "row-span-1"
+            }`}
           >
             <Image
               src={foto.src}

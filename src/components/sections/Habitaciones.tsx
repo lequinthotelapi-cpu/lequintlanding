@@ -15,7 +15,7 @@ export function Habitaciones() {
           <SectionHeading
             id="habitaciones-heading"
             title="Tres formas de quedarse"
-            description="Sencilla, Doble y Familiar: cada una con aire acondicionado, TV y wifi gratis."
+            description="Individual, Doble y Familiar: cada una con aire acondicionado, TV y wifi gratis."
           />
         </Reveal>
 

@@ -1,12 +1,13 @@
 import {
   Bathtub,
   Briefcase,
+  Clock,
+  Moped,
   Motorcycle,
   PawPrint,
   ShieldCheck,
   Snowflake,
   Storefront,
-  Television,
   WifiHigh,
 } from "@phosphor-icons/react/dist/ssr";
 import type { ServicioIcono } from "@/types";
@@ -18,12 +19,13 @@ const iconMap: Record<ServicioIcono, typeof WifiHigh> = {
   wifi: WifiHigh,
   moto: Motorcycle,
   ac: Snowflake,
-  tv: Television,
   tienda: Storefront,
   trabajo: Briefcase,
   tina: Bathtub,
   mascota: PawPrint,
   seguridad: ShieldCheck,
+  recepcion: Clock,
+  domicilio: Moped,
 };
 
 export function ServiciosDestacados() {

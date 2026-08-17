@@ -1,4 +1,4 @@
-import { Phone, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
+import { Phone, WhatsappLogo, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import { hotel } from "@/data/hotel";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -6,6 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export function Contacto() {
   const whatsappHref = hotel.whatsapp ? `https://wa.me/${hotel.whatsapp}` : "#contacto";
   const telefonoHref = hotel.telefono ? `tel:${hotel.telefono.replace(/\s+/g, "")}` : null;
+  const emailHref = hotel.email ? `mailto:${hotel.email}` : null;
 
   return (
     <section
@@ -39,11 +40,16 @@ export function Contacto() {
               {hotel.telefono}
             </Button>
           ) : null}
+          {emailHref ? (
+            <Button href={emailHref} variant="outline-invert" icon={EnvelopeSimple}>
+              {hotel.email}
+            </Button>
+          ) : null}
         </div>
 
-        {hotel.horario ? (
-          <p className="mt-6 text-sm text-paper/60">{hotel.horario}</p>
-        ) : null}
+        <p className="mt-6 text-sm text-paper/60">
+          Check-in desde las {hotel.checkIn} · Check-out hasta las {hotel.checkOut}
+        </p>
       </Reveal>
     </section>
   );

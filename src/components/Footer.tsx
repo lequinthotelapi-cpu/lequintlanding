@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FacebookLogo, InstagramLogo, MapPin, Phone, TiktokLogo, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import logoWhite from "@assets/imgs/LOGO2.png";
-import recepcion from "@assets/imgs/recepcion.jpg";
+import recepcion2 from "@assets/imgs/recepcion2.jpg";
 import { hotel } from "@/data/hotel";
 
 const links = [
@@ -24,13 +24,12 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-footer-bg text-footer-fg">
       {/*
-        recepcion.jpg (no lobby2.png/lobby3.png: esas muestran el
-        letrero con el error de marca "LA QUINT"). Muy tenue, con un
-        degradado encima para que el texto conserve buen contraste.
+        recepcion2.jpg. Muy tenue, con un degradado encima para que
+        el texto conserve buen contraste.
       */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <Image
-          src={recepcion}
+          src={recepcion2}
           alt=""
           fill
           sizes="100vw"

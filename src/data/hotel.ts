@@ -11,8 +11,10 @@ type HotelInfo = {
   direccion: string;
   telefono: string;
   whatsapp: string;
+  email: string;
   coordenadas: { lat: number; lng: number } | null;
-  horario: string;
+  checkIn: string;
+  checkOut: string;
   redes: {
     instagram: string;
     facebook: string;
@@ -29,10 +31,12 @@ export const hotel: HotelInfo = {
   telefono: "+57 311 6506060",
   // Formato E.164 sin "+" para el enlace wa.me.
   whatsapp: "573116506060",
+  // Correo oficial del hotel
+  email: "lequinthotel@gmail.com",
   // PENDIENTE: coordenadas GPS exactas
   coordenadas: null,
-  // PENDIENTE: horario real de recepcion
-  horario: "",
+  checkIn: "2:00 p.m.",
+  checkOut: "12:00 m.",
   // PENDIENTE: reemplazar por la URL exacta del perfil del hotel en
   // cada red social. Por ahora apuntan a la pagina general de la
   // plataforma, tal como se pidio, hasta tener las rutas reales.

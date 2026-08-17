@@ -6,7 +6,7 @@ export type Foto = {
 };
 
 export type Habitacion = {
-  slug: "sencilla" | "doble" | "familiar";
+  slug: "individual" | "doble" | "familiar";
   nombre: string;
   resumen: string;
   descripcion: string;
@@ -19,12 +19,13 @@ export type ServicioIcono =
   | "wifi"
   | "moto"
   | "ac"
-  | "tv"
   | "tienda"
   | "trabajo"
   | "tina"
   | "mascota"
-  | "seguridad";
+  | "seguridad"
+  | "recepcion"
+  | "domicilio";
 
 export type Servicio = {
   label: string;

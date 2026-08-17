@@ -8,7 +8,6 @@ export const servicios: Servicio[] = [
   { label: "Wi-Fi gratis", icon: "wifi" },
   { label: "Parqueadero para motos", icon: "moto" },
   { label: "Aire acondicionado", icon: "ac" },
-  { label: "TV", icon: "tv" },
   { label: "Tienda de bebidas y snacks", icon: "tienda" },
   { label: "Área de trabajo en algunas habitaciones", icon: "trabajo" },
   { label: "Tina en la habitación familiar", icon: "tina" },
@@ -22,4 +21,8 @@ export const servicios: Servicio[] = [
     icon: "seguridad",
     detail: "Alarma y cámaras de vigilancia en la zona.",
   },
+  { label: "Recepción 24 horas",
+    icon: "recepcion",
+    detail: "Puedes pedir domicilios de comida o encargos a cualquier hora.",
+   },
 ];

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { List, WhatsappLogo, X } from "@phosphor-icons/react";
+import { List, WhatsappLogo, X, CalendarCheck } from "@phosphor-icons/react";
 import logoBlack from "@assets/imgs/LOGO1.png";
 import logoWhite from "@assets/imgs/LOGO2.png";
 import { hotel } from "@/data/hotel";
@@ -156,8 +156,8 @@ export function Navbar() {
               rel={hotel.whatsapp ? "noopener noreferrer" : undefined}
               className="inline-flex items-center gap-2 rounded-[2px] border border-accent-ink bg-accent-ink px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent active:translate-y-px"
             >
-              <WhatsappLogo size={18} weight="fill" />
-              WhatsApp
+              <CalendarCheck size={18} weight="fill" />
+              Reservas
             </a>
           </div>
 

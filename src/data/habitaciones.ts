@@ -1,8 +1,11 @@
-import sencillaHero from "@assets/imgs/sencilla3.jpg";
-import sencillaSecundaria from "@assets/imgs/sencilla2.jpg";
-import sencillaTerciaria from "@assets/imgs/sencilla1.jpeg";
-import dobleHero from "@assets/imgs/doble.jpg";
-import familiarHero from "@assets/imgs/familiar.jpg";
+import individual1 from "@assets/imgs/individual1.jpg";
+import individual2 from "@assets/imgs/individual2.jpg";
+import individual3 from "@assets/imgs/individual3.jpg";
+import doble from "@assets/imgs/doble.jpg";
+import dobles1 from "@assets/imgs/dobles1.jpg";
+import familiar from "@assets/imgs/familiar.jpg";
+import familiar2 from "@assets/imgs/familiar2.jpg";
+import familiar3 from "@assets/imgs/familiar3.jpg";
 import type { Habitacion } from "@/types";
 
 /**
@@ -12,17 +15,17 @@ import type { Habitacion } from "@/types";
  */
 export const habitaciones: Habitacion[] = [
   {
-    slug: "sencilla",
-    nombre: "Habitación Sencilla",
-    resumen: "Cama doble, pensada para viajar ligero.",
+    slug: "individual",
+    nombre: "Habitación Individual",
+    resumen: "Cama sencilla, pensada para viajar ligero.",
     descripcion:
-      "Habitación con cama doble, aire acondicionado y televisión. Baño privado con ducha de vidrio.",
+      "Habitación con cama sencilla, aire acondicionado y televisión. Baño privado con ducha de vidrio.",
     capacidad: null,
     amenities: ["Wi-Fi gratis", "Aire acondicionado", "TV"],
     fotos: [
-      { src: sencillaHero, alt: "Habitación Sencilla de Le Quint Hotel, cama con toallas dobladas en forma de corazón" },
-      { src: sencillaSecundaria, alt: "Habitación Sencilla de Le Quint Hotel, vista del cabecero y mesa de noche" },
-      { src: sencillaTerciaria, alt: "Habitación Sencilla de Le Quint Hotel, vista general con ventilador de techo" },
+      { src: individual1, alt: "Habitación Individual de Le Quint Hotel, cama con toallas dobladas en forma de corazón" },
+      { src: individual2, alt: "Habitación Individual de Le Quint Hotel, vista del cabecero" },
+      { src: individual3, alt: "Habitación Individual de Le Quint Hotel, vista general con closet" },
     ],
   },
   {
@@ -34,7 +37,8 @@ export const habitaciones: Habitacion[] = [
     capacidad: null,
     amenities: ["Wi-Fi gratis", "Aire acondicionado", "TV"],
     fotos: [
-      { src: dobleHero, alt: "Habitación Doble de Le Quint Hotel, cama con cabecero oscuro" },
+      { src: doble, alt: "Habitación Doble de Le Quint Hotel, cama con cabecero oscuro" },
+      { src: dobles1, alt: "Habitación Doble de Le Quint Hotel, otra vista de la cama" },
     ],
   },
   {
@@ -46,7 +50,9 @@ export const habitaciones: Habitacion[] = [
     capacidad: null,
     amenities: ["Wi-Fi gratis", "Aire acondicionado", "TV", "Tina"],
     fotos: [
-      { src: familiarHero, alt: "Habitación Familiar de Le Quint Hotel, dos camas y closet en madera oscura" },
+      { src: familiar, alt: "Habitación Familiar de Le Quint Hotel, dos camas y closet en madera oscura" },
+      { src: familiar2, alt: "Habitación Familiar de Le Quint Hotel, vista de las dos camas" },
+      { src: familiar3, alt: "Habitación Familiar de Le Quint Hotel, detalle de las camas con toallas" },
     ],
   },
 ];

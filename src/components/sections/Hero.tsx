@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import fachada from "@assets/imgs/fachada.jpg";
-import recepcion from "@assets/imgs/recepcion.jpg";
-import sencilla3 from "@assets/imgs/sencilla3.jpg";
+import recepcion2 from "@assets/imgs/recepcion2.jpg";
+import individual2 from "@assets/imgs/individual2.jpg";
 import bano2 from "@assets/imgs/bano2.jpg";
 import { hotel } from "@/data/hotel";
 import { Button } from "@/components/ui/Button";
@@ -42,8 +42,8 @@ export function Hero() {
               Le Quint Hotel, en el centro de Cúcuta
             </h1>
             <p className="mt-4 max-w-[38ch] text-base leading-relaxed text-paper/85">
-              Habitaciones sencillas, dobles y familiares con wifi gratis y
-              aire acondicionado, a pasos del centro.
+              Habitaciones individuales, dobles y familiares con wifi gratis
+              y aire acondicionado, a pasos del centro.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button
@@ -64,7 +64,7 @@ export function Hero() {
         <div className="grid grid-rows-2 gap-1.5 sm:gap-2">
           <div className="relative aspect-[16/9] overflow-hidden bg-stone lg:aspect-auto lg:h-full">
             <Image
-              src={recepcion}
+              src={recepcion2}
               alt="Recepción de Le Quint Hotel"
               fill
               sizes="(min-width: 1024px) 27vw, 100vw"
@@ -74,7 +74,7 @@ export function Hero() {
           <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
             <div className="relative aspect-square overflow-hidden bg-stone lg:aspect-auto lg:h-full">
               <Image
-                src={sencilla3}
+                src={individual2}
                 alt="Habitación de Le Quint Hotel"
                 fill
                 sizes="(min-width: 1024px) 14vw, 50vw"

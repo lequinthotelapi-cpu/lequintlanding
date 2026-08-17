@@ -33,11 +33,11 @@ export const metadata: Metadata = {
   },
   // PENDIENTE: descripcion oficial del hotel, a confirmar con el cliente.
   description:
-    "Le Quint Hotel, en el centro de Cúcuta. Habitaciones Sencilla, Doble y Familiar, wifi gratis y atención directa por WhatsApp.",
+    "Le Quint Hotel, en el centro de Cúcuta. Habitaciones Individual, Doble y Familiar, wifi gratis y atención directa por WhatsApp.",
   openGraph: {
     title: "Le Quint Hotel · Cúcuta",
     description:
-      "Le Quint Hotel, en el centro de Cúcuta. Habitaciones Sencilla, Doble y Familiar, wifi gratis y atención directa por WhatsApp.",
+      "Le Quint Hotel, en el centro de Cúcuta. Habitaciones Individual, Doble y Familiar, wifi gratis y atención directa por WhatsApp.",
     url: siteUrl,
     siteName: "Le Quint Hotel",
     locale: "es_CO",
