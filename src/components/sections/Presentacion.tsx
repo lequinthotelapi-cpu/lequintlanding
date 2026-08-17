@@ -26,10 +26,9 @@ export function Presentacion() {
             Un hotel pequeño, en el corazón de Cúcuta
           </h2>
           <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-muted">
-            Le Quint Hotel está en la Avenida 5, a pasos del centro de la
-            ciudad. Atención directa y de cerca: quien recibe a los
-            huéspedes conoce el hotel de memoria, y hasta el gato de la
-            recepción tiene su lugar fijo en el mostrador.
+            Le Quint Hotel está en la Avenida 5, a pasos del centro de la ciudad.
+            Es un hotel familiar, ideal para descansar y disfrutar de una atención
+            cercana y personalizada.
           </p>
 
           <ul className="mt-8 flex flex-col gap-5 border-t border-line pt-7">
