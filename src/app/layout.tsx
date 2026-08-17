@@ -17,9 +17,10 @@ const body = Instrument_Sans({
   display: "swap",
 });
 
-// PENDIENTE: dominio real de publicacion. Se deja el placeholder
-// para que metadataBase/canonical/OG resuelvan URLs absolutas.
-const siteUrl = "https://lequinthotel.example.com";
+// Temporalmente apuntamos al deployment de Vercel mientras no hay
+// un dominio definitivo, para que las URLs absolutas y la imagen
+// Open Graph resuelvan correctamente al compartir en WhatsApp.
+const siteUrl = "https://lequintlanding.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -42,6 +43,13 @@ export const metadata: Metadata = {
     siteName: "Le Quint Hotel",
     locale: "es_CO",
     type: "website",
+    images: [
+      {
+        url: `${siteUrl.replace(/\/$/, "")}/opengraph-image`,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: siteUrl,
